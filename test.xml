@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdtprojectproperties>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.IncludePaths">
+<language name="C Source File">
+<includepath workspace_path="true">/${ProjName}/src</includepath>
+<includepath workspace_path="true">/nucleo-f746zg_hal_lib/HAL_Driver/Inc</includepath>
+<includepath workspace_path="true">/nucleo-f746zg_hal_lib/CMSIS/core</includepath>
+<includepath workspace_path="true">/nucleo-f746zg_hal_lib/CMSIS/device</includepath>
+<includepath workspace_path="true">/alesi/include</includepath>
+<includepath workspace_path="true">/alesi</includepath>
+
+</language>
+<language name="S">
+<includepath workspace_path="true">/${ProjName}/src</includepath>
+<includepath workspace_path="true">/nucleo-f746zg_hal_lib/HAL_Driver/Inc</includepath>
+<includepath workspace_path="true">/nucleo-f746zg_hal_lib/CMSIS/core</includepath>
+<includepath workspace_path="true">/nucleo-f746zg_hal_lib/CMSIS/device</includepath>
+<includepath workspace_path="true">/alesi/include</includepath>
+<includepath workspace_path="true">/alesi</includepath>
+
+</language>
+<language name="Object File">
+
+</language>
+<language name="Assembly Source File">
+<includepath workspace_path="true">/nucleo-f746zg_hal_lib/CMSIS/core</includepath>
+<includepath workspace_path="true">/nucleo-f746zg_hal_lib/CMSIS/device</includepath>
+<includepath workspace_path="true">/nucleo-f746zg_hal_lib/HAL_Driver/Inc</includepath>
+<includepath workspace_path="true">/alesi/include</includepath>
+
+</language>
+<language name="s">
+<includepath workspace_path="true">/nucleo-f746zg_hal_lib/CMSIS/core</includepath>
+<includepath workspace_path="true">/nucleo-f746zg_hal_lib/CMSIS/device</includepath>
+<includepath workspace_path="true">/nucleo-f746zg_hal_lib/HAL_Driver/Inc</includepath>
+<includepath workspace_path="true">/alesi/include</includepath>
+
+</language>
+</section>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.Macros">
+<language name="C Source File">
+<macro>
+<name>NUCLEO_F746ZG</name><value/>
+</macro>
+<macro>
+<name>STM32F746ZGTx</name><value/>
+</macro>
+<macro>
+<name>STM32F746xx</name><value/>
+</macro>
+<macro>
+<name>STM32F7</name><value/>
+</macro>
+<macro>
+<name>STM32</name><value/>
+</macro>
+<macro>
+<name>DEBUG</name><value/>
+</macro>
+
+</language>
+<language name="S">
+<macro>
+<name>NUCLEO_F746ZG</name><value/>
+</macro>
+<macro>
+<name>STM32F746ZGTx</name><value/>
+</macro>
+<macro>
+<name>STM32F746xx</name><value/>
+</macro>
+<macro>
+<name>STM32F7</name><value/>
+</macro>
+<macro>
+<name>STM32</name><value/>
+</macro>
+<macro>
+<name>DEBUG</name><value/>
+</macro>
+
+</language>
+<language name="Object File">
+
+</language>
+<language name="Assembly Source File">
+
+</language>
+<language name="s">
+
+</language>
+</section>
+</cdtprojectproperties>
