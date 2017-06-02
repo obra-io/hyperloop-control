@@ -22,32 +22,49 @@
 
 /* Private variables ---------------------------------------------------------*/
 
-static Alesi_StatusTypeDef setup(void);
-static uint32_t event_handler(uint32_t const flags);
+static Alesi_StatusTypeDef setup(Alesi_HandleTypeDef const me_h, Alesi_AO_ModeTypeDef const mode,
+        void const * const params);
+
+static Alesi_StatusTypeDef event_handler(Alesi_HandleTypeDef const me_h,
+        Alesi_AO_ModeTypeDef const mode, Alesi_HandleTypeDef const signal);
+
+static Alesi_StatusTypeDef inspect(Alesi_HandleTypeDef const me_h);
 
 static Alesi_AO_OpsTypeDef const operation_ops =
 {
     .setup = setup,
-    .event_handler = event_handler
+    .event_handler = event_handler,
+    .inspect = inspect
 };
 
 Alesi_AO_DescTypeDef const operation_desc =
 {
-    .ops = &operation_ops
+    .ops = &operation_ops,
+    .name = "operation"
 };
 
 /* Private function prototypes -----------------------------------------------*/
 
 /* Private functions ---------------------------------------------------------*/
 
+/* Exported functions --------------------------------------------------------*/
+
 /**
   * @brief
   * @param  none
   * @retval
   */
-static Alesi_StatusTypeDef setup(void)
+static Alesi_StatusTypeDef setup(Alesi_HandleTypeDef const me_h, Alesi_AO_ModeTypeDef const mode,
+        void const * const params)
 {
-    return ALESI_OK;
+    Alesi_StatusTypeDef status = ALESI_ERROR;
+
+    if (mode == ALESI_AO_MODE__PRE_OPERATIONAL)
+    {
+
+    }
+
+    return status;
 }
 
 /**
@@ -55,9 +72,10 @@ static Alesi_StatusTypeDef setup(void)
   * @param  none
   * @retval
   */
-
-static uint32_t event_handler(uint32_t const flags)
+static Alesi_StatusTypeDef event_handler(Alesi_HandleTypeDef const me_h,
+        Alesi_AO_ModeTypeDef const mode, Alesi_HandleTypeDef const signal)
 {
+    Alesi_StatusTypeDef status = ALESI_ERROR;
     static uint8_t i;
 
     if (i)
@@ -73,15 +91,19 @@ static uint32_t event_handler(uint32_t const flags)
         i = 1;
     }
 
-    return 0;
+    return status;
 }
 
-/* Exported functions --------------------------------------------------------*/
-
 /**
-  * @brief  
+  * @brief
   * @param  none
-  * @retval 
+  * @retval
   */
+static Alesi_StatusTypeDef inspect(Alesi_HandleTypeDef const me_h)
+{
+    Alesi_StatusTypeDef status = ALESI_ERROR;
+
+    return status;
+}
 
 /*****************************END OF FILE************************************/

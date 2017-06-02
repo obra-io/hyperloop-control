@@ -14,7 +14,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include <alesi.h>
-#include <util/sizes.h>
+#include <alesi_sizes.h>
 
 #include "control/operation.h"
 
@@ -44,12 +44,19 @@ static Alesi_StatusTypeDef init_control_session(void)
     static Alesi_Session_DescTypeDef const session_desc =
     {
         .ao_descs = ao_descs,
-        .num_ao_descs = COUNT_OF(ao_descs)
+        .num_ao_descs = COUNT_OF(ao_descs),
+        .path = "session/control/"
     };
 
-    Alesi_StatusTypeDef status;
+    Alesi_StatusTypeDef status = ALESI_ERROR;
+    Alesi_HandleTypeDef session_h;
 
-    status = alesi_init_session(&session_desc);
+    session_h = alesi_init_session(&session_desc);
+
+    if (session_h)
+    {
+        status = ALESI_OK;
+    }
 
     return status;
 }
